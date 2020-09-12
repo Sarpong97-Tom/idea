@@ -1,0 +1,134 @@
+:root {
+  font-size: calc(0.5vw + 0.7em);
+  --blue1: rgb(3, 3, 80);
+  --blue2: rgb(91, 91, 243);
+  --white: #fff;
+  --grey-light: #ccc;
+  --deep-grey: rgb(107, 107, 107);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.header {
+  background-color: var(--blue1);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  min-height: 10vh;
+}
+.header-content{
+    display: flex;
+    position: relative;
+    top: 2em;
+}
+.header h1, li , a{
+    color: white;
+    text-decoration: none;
+}
+.title {
+  margin: 0 2em;
+}
+.nav ul li {
+  display: inline;
+  list-style: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  font-weight: bold;
+}
+.banner{
+    background-image: url('../images/bg-2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 90vh;
+}
+.overlay {
+    background-color: rgba(17, 16, 16,.6);
+    height: 90vh;
+
+}
+.banner-content{
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    top: 30%;
+    bottom: 50%;
+    left: -10%;
+}
+.banner-content h2 {
+    font-size: 4em;
+    line-height: 1.5em;
+    animation-name: from-top;
+    animation-duration: 2s;
+    position: relative;
+}
+@keyframes from-top{
+    0%{
+        top: -2em;
+    }
+    100%{
+        top: 0em;
+    }
+}
+.banner-content p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    animation-name: from-left;
+    animation-duration: 2s;
+    position: relative;
+}
+@keyframes from-left{
+    0%{
+        left: -6em;
+    }
+    100%{
+        left: 0em;
+    }
+}
+footer {
+  margin-top: auto;
+}
+.banner-content button{
+    background-color: var(--blue2);
+    position: relative;
+    color: white;
+    margin-left: 4em;
+    height: 5em;
+    width: 15em;
+    border: none;
+    transition-property: all;
+    transition-duration: 1s;
+    animation-name: opacity-fade;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+}
+@keyframes opacity-fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.banner-content button:hover{
+    background-color: var(--blue1);
+    border:none
+}
