@@ -1,5 +1,5 @@
 :root{
-    font-size: calc( .5vw + 1em);
+    font-size: calc( .5vw + .5em);
     --blue1: rgb(33, 33, 243);
     --blue2: rgb(91, 91, 243);
     --white: #fff;
