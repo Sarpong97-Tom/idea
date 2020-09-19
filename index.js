@@ -9,5 +9,5 @@ app.get("/about", (req, res) => {
 });
 PORT = 8000;
 app.listen(process.env.PORT || PORT, () => {
-  console.log("App is working on " + PORT);
+  console.log("App is running on " + PORT);
 });
